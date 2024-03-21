@@ -9,15 +9,15 @@ def str_para_booleano(valor):
     else:
         return valor
 
-# Nome do arquivo CSV
-nome_arquivo = 'dados.csv'
+# Arquivo CSV
+arquivo_csv = 'dados.csv'
 
 # Dicionários para armazenar os dados
 dados_1 = {'nome': [], 'email': [], 'enviado': []}
 dados_2 = {'nome': [], 'email': [], 'enviado': []}
 
 # Abre o arquivo CSV para leitura
-with open(nome_arquivo, mode='r', newline='', encoding='utf-8') as arquivo:
+with open(arquivo_csv, mode='r', newline='', encoding='utf-8') as arquivo:
     leitor_csv = csv.reader(arquivo)
 
     # Variável para determinar em qual dicionário os dados devem ser armazenados
@@ -34,11 +34,11 @@ with open(nome_arquivo, mode='r', newline='', encoding='utf-8') as arquivo:
         if em_dados_1:
             dados_1['nome'].append(linha[0])
             dados_1['email'].append(linha[1])
-            dados_1['enviado'].append(str_para_booleano(linha[2]))  # Usa a função de conversão
+            dados_1['enviado'].append(str_para_booleano(linha[2])) 
         else:
             dados_2['nome'].append(linha[0])
             dados_2['email'].append(linha[1])
-            dados_2['enviado'].append(str_para_booleano(linha[2]))  # Usa a função de conversão
+            dados_2['enviado'].append(str_para_booleano(linha[2]))  
 
 # Imprime os dados lidos
 print("\ndados_1 = {")

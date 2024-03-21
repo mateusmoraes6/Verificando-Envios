@@ -4,7 +4,6 @@ dict_1 = {
     'enviado': [False],
 }
 
-
 def extrair_lista_email(dict_1, dict_2):
     lista_1 = list(zip(dict_1['nome'], dict_1['email'], dict_1['enviado']))
     print(f'\nAmostra da lista 1 = {lista_1[0]}')
